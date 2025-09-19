@@ -3,24 +3,34 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 import os
 from dotenv import load_dotenv
+import telebot
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+if not TOKEN:
+ raise RuntimeError("В .env нет TOKEN")
+bot = telebot.TeleBot(TOKEN)
 
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привет! Я твой бот 😎")
+@bot.message_handler(commands=['start'])
+def start(message):
+ bot.reply_to(message, "Привет! Я твой первый бот! Напиши /help")
+ 
+ 
+@bot.message_handler(commands=['help'])
+def help_cmd(message):
+ bot.reply_to(message, "/start - начать\n/help - помощь\n/about - что я умею\n/marco - МАРКО!")
+ 
+ 
+@bot.message_handler(commands=['about'])
+def about(message):
+ bot.reply_to(message, "Простой бот. Автор бота — Антон.")
 
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Список команд:\n/start - приветствие\n/help - помощь")
 
-def main():
-    app = Application.builder().token(TOKEN).build()
-
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("help", help_command))
-
-    app.run_polling()
-
+@bot.message_handler(commands=['marco'])
+def ping(message):
+    bot.reply_to(message, "ПОЛО!")
+    
+ 
 if __name__ == "__main__":
-    main()
+ bot.infinity_polling(skip_pending=True)
