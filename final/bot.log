@@ -1,0 +1,232 @@
+2025-12-27 20:39:28,346 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:39:28,346 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:42:04,536 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:42:04,539 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:44:37,520 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:44:37,521 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:48:57,799 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:48:57,801 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:49:21,824 | ERROR | TeleBot | Infinity polling exception: register_musician() missing 1 required positional argument: 'lon'
+2025-12-27 20:49:21,834 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 126, in musician_location
+    db.register_musician(
+TypeError: register_musician() missing 1 required positional argument: 'lon'
+
+2025-12-27 20:50:16,070 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:50:16,071 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:54:05,535 | ERROR | TeleBot | Infinity polling exception: table musicians has no column named location_text
+2025-12-27 20:54:05,546 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 126, in musician_location
+    db.register_musician(
+  File "C:\Users\SenDerMen\Desktop\bot\final\db.py", line 35, in register_musician
+    conn.execute("""
+sqlite3.OperationalError: table musicians has no column named location_text
+
+2025-12-27 20:54:43,791 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:54:43,791 | ERROR | TeleBot | Break infinity polling
+2025-12-27 20:55:45,730 | ERROR | TeleBot | Infinity polling exception: tuple indices must be integers or slices, not str
+2025-12-27 20:55:45,739 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 181, in band_description
+    send_musician_alert(m, req_id, genre)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 187, in send_musician_alert
+    m["telegram_id"],
+    ~^^^^^^^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+
+2025-12-27 20:55:48,742 | ERROR | TeleBot | Infinity polling exception: tuple indices must be integers or slices, not str
+2025-12-27 20:55:48,752 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 73, in handle_menu_buttons
+    profile(message)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 210, in profile
+    f"🎸 Ваш профиль:\nИнструмент: {user['instrument']}\nОпыт: {user['experience']} лет\nЖанры: {user['genres']}\nЛокация: {user['location_text']}"
+                                    ~~~~^^^^^^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+
+2025-12-27 20:55:51,755 | ERROR | TeleBot | Infinity polling exception: tuple indices must be integers or slices, not str
+2025-12-27 20:55:51,760 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 73, in handle_menu_buttons
+    profile(message)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 210, in profile
+    f"🎸 Ваш профиль:\nИнструмент: {user['instrument']}\nОпыт: {user['experience']} лет\nЖанры: {user['genres']}\nЛокация: {user['location_text']}"
+                                    ~~~~^^^^^^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+
+2025-12-27 20:57:59,609 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 20:57:59,610 | ERROR | TeleBot | Break infinity polling
+2025-12-27 21:03:36,088 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 21:03:36,089 | ERROR | TeleBot | Break infinity polling
+2025-12-27 21:08:56,325 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 21:08:56,326 | ERROR | TeleBot | Break infinity polling
+2025-12-27 21:09:36,202 | ERROR | TeleBot | Infinity polling exception: 'about'
+2025-12-27 21:09:36,205 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 87, in handle_menu_buttons
+    profile(message)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 237, in profile
+    f"🎸 Ваш профиль:\nИнструмент: {user['instrument']}\nОпыт: {user['experience']} лет\nЖанры: {user['genres']}\nЛокация: {user['location_text']}\n💬 О себе: {user['about']}"
+                                                                                                                                                                ~~~~^^^^^^^^^
+KeyError: 'about'
+
+2025-12-27 21:09:39,209 | ERROR | TeleBot | Infinity polling exception: 'about'
+2025-12-27 21:09:39,216 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 87, in handle_menu_buttons
+    profile(message)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 237, in profile
+    f"🎸 Ваш профиль:\nИнструмент: {user['instrument']}\nОпыт: {user['experience']} лет\nЖанры: {user['genres']}\nЛокация: {user['location_text']}\n💬 О себе: {user['about']}"
+                                                                                                                                                                ~~~~^^^^^^^^^
+KeyError: 'about'
+
+2025-12-27 21:09:42,219 | ERROR | TeleBot | Infinity polling exception: 'about'
+2025-12-27 21:09:42,225 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 87, in handle_menu_buttons
+    profile(message)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 237, in profile
+    f"🎸 Ваш профиль:\nИнструмент: {user['instrument']}\nОпыт: {user['experience']} лет\nЖанры: {user['genres']}\nЛокация: {user['location_text']}\n💬 О себе: {user['about']}"
+                                                                                                                                                                ~~~~^^^^^^^^^
+KeyError: 'about'
+
+2025-12-27 21:09:54,990 | ERROR | TeleBot | Infinity polling exception: table band_requests has no column named min_experience
+2025-12-27 21:09:54,993 | ERROR | TeleBot | Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\SenDerMen\AppData\Roaming\Python\Python312\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "C:\Users\SenDerMen\Desktop\bot\final\main.py", line 189, in band_description
+    req_id = db.create_band_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SenDerMen\Desktop\bot\final\db.py", line 63, in create_band_request
+    cur = conn.execute("""
+          ^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table band_requests has no column named min_experience
+
+2025-12-27 21:10:10,030 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 21:10:10,032 | ERROR | TeleBot | Break infinity polling
+2025-12-27 21:12:03,509 | ERROR | TeleBot | Infinity polling: polling exited
+2025-12-27 21:12:03,510 | ERROR | TeleBot | Break infinity polling
